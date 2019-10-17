@@ -46,8 +46,35 @@ a:hover{text-decoration: none; cursor:pointer;}
 .bloc-lg{
 	padding:100px 50px;
 }
-.bloc-sm{
-	padding:20px 50px;
+
+/* = Full Screen Blocs 
+-------------------------------------------------------------- */
+
+.bloc-fill-screen{
+	min-height:100vh;
+	display: flex;
+	flex-direction: column;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.bloc-fill-screen > .container{
+	align-self: flex-middle;
+	flex-grow: 1;
+	display: flex;
+}
+.bloc-fill-screen > .container > .row{
+	flex-grow: 1;
+	align-self: center;
+	width:100%;
+}
+.bloc-fill-screen .fill-bloc-top-edge, .bloc-fill-screen .fill-bloc-bottom-edge{
+	flex-grow: 0;
+}
+.bloc-fill-screen .fill-bloc-top-edge{
+	align-self: flex-start;
+}
+.bloc-fill-screen .fill-bloc-bottom-edge{
+	align-self: flex-end;
 }
 
 
@@ -123,19 +150,22 @@ button{
 	outline: none!important;
 }
 
-.a-block{
-	width:100%;
-	text-align:left;
-	display: inline-block;
+.btn-wire{
+	background:transparent!important;
+	border:2px solid transparent;
 }
-.text-center .a-block{
-	text-align:center;
+.btn-wire:hover{
+	background:transparent!important;
+	border:2px solid transparent;
 }
 
 /* = Icons
 -------------------------------------------------------------- */
 .icon-md{
 	font-size:30px!important;
+}
+.icon-lg{
+	font-size:60px!important;
 }
 
 
@@ -256,29 +286,3 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	   height: 320px;
     }
 }
-
-@media (max-width: 991px){
-	.img-style{
-		width:1000px;
-		border-radius:0px 0px 0px 0px;
-	}
-	
-}
-
-@media (max-width: 767px){
-	.text-right{
-	}
-	.text-left{
-	}
-	.text-center{
-	}
-	
-}
-
-@media (max-width: 575px){
-	.footer-link{
-		text-align:center;
-	}
-	
-}
-
